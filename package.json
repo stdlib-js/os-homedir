@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/os-homedir",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Return the current user's home directory.",
   "license": "Apache-2.0",
   "author": {
