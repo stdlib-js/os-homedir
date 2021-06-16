@@ -50,10 +50,10 @@ function getuid() {
 */
 function makeOpts() {
 	var opts = {
-		'@stdlib/os/platform': 'darwin',
-		'@stdlib/assert/is-windows': false,
-		'@stdlib/process/getuid': getuid,
-		'@stdlib/process/env': ENV
+		'@stdlib/os-platform': 'darwin',
+		'@stdlib/assert-is-windows': false,
+		'@stdlib/process-getuid': getuid,
+		'@stdlib/process-env': ENV
 	};
 	return opts;
 }
@@ -74,11 +74,11 @@ tape( 'the function returns a home directory in a non-windows environment (HOME)
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'HOME': '/Users/beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/Users/beep', 'returns home directory' );
@@ -91,11 +91,11 @@ tape( 'the function returns a home directory in a Mac OS X environment (LOGNAME)
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'LOGNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/Users/beep', 'returns home directory' );
@@ -108,11 +108,11 @@ tape( 'the function returns a home directory in a Linux environment (LOGNAME)', 
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'LOGNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
+	opts[ '@stdlib/os-platform' ] = 'linux';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/home/beep', 'returns home directory' );
@@ -125,11 +125,11 @@ tape( 'the function returns a home directory in a Mac OS X environment (USER)', 
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'USER': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/Users/beep', 'returns home directory' );
@@ -142,11 +142,11 @@ tape( 'the function returns a home directory in a Linux environment (USER)', fun
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'USER': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
+	opts[ '@stdlib/os-platform' ] = 'linux';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/home/beep', 'returns home directory' );
@@ -159,11 +159,11 @@ tape( 'the function returns a home directory in a Mac OS X environment (LNAME)',
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'LNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/Users/beep', 'returns home directory' );
@@ -176,11 +176,11 @@ tape( 'the function returns a home directory in a Linux environment (LNAME)', fu
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'LNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
+	opts[ '@stdlib/os-platform' ] = 'linux';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/home/beep', 'returns home directory' );
@@ -192,11 +192,11 @@ tape( 'the function returns a home directory in a Mac OS X environment (USERNAME
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'USERNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/Users/beep', 'returns home directory' );
@@ -208,11 +208,11 @@ tape( 'the function returns a home directory in a Linux environment (USERNAME)',
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'USERNAME': 'beep',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
+	opts[ '@stdlib/os-platform' ] = 'linux';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), '/home/beep', 'returns home directory' );
@@ -224,10 +224,10 @@ tape( 'the function returns `null` if unable to locate a home directory in a Mac
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'darwin';
+	opts[ '@stdlib/os-platform' ] = 'darwin';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), null, 'returns null' );
@@ -239,10 +239,10 @@ tape( 'the function returns `null` if unable to locate a home directory in a Lin
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
+	opts[ '@stdlib/os-platform' ] = 'linux';
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), null, 'returns null' );
@@ -254,11 +254,11 @@ tape( 'the function returns the `/root` directory if run as `root` in a Linux en
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/os/platform' ] = 'linux';
-	opts[ '@stdlib/process/getuid' ] = mock;
+	opts[ '@stdlib/os-platform' ] = 'linux';
+	opts[ '@stdlib/process-getuid' ] = mock;
 
 	homedir = proxyquire( mpath, opts );
 
@@ -275,11 +275,11 @@ tape( 'the function returns a home directory on Windows (USERPROFILE)', function
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'USERPROFILE': 'C:\\Users\\boop',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/assert/is-windows' ] = true;
+	opts[ '@stdlib/assert-is-windows' ] = true;
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), 'C:\\Users\\boop', 'returns home directory' );
@@ -291,12 +291,12 @@ tape( 'the function returns a home directory on Windows (HOMEDRIVE+HOMEPATH)', f
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'HOMEDRIVE': 'C:',
 		'HOMEPATH': '\\Users\\boop',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/assert/is-windows' ] = true;
+	opts[ '@stdlib/assert-is-windows' ] = true;
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), 'C:\\Users\\boop', 'returns home directory' );
@@ -308,11 +308,11 @@ tape( 'the function returns a home directory on Windows (HOME)', function test( 
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'HOME': 'C:\\Users\\boop',
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/assert/is-windows' ] = true;
+	opts[ '@stdlib/assert-is-windows' ] = true;
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), 'C:\\Users\\boop', 'returns home directory' );
@@ -324,10 +324,10 @@ tape( 'the function returns `null` if unable to locate a home directory on Windo
 	var opts;
 
 	opts = makeOpts();
-	opts[ '@stdlib/process/env' ] = {
+	opts[ '@stdlib/process-env' ] = {
 		'@noCallThru': true
 	};
-	opts[ '@stdlib/assert/is-windows' ] = true;
+	opts[ '@stdlib/assert-is-windows' ] = true;
 	homedir = proxyquire( mpath, opts );
 
 	t.strictEqual( homedir(), null, 'returns null' );
