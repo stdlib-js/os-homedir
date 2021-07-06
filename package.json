@@ -43,7 +43,7 @@
   "dependencies": {
     "@stdlib/assert-is-function": "^0.0.x",
     "@stdlib/assert-is-windows": "^0.0.x",
-    "@stdlib/cli": "^0.0.x",
+    "@stdlib/cli-ctor": "^0.0.x",
     "@stdlib/fs-read-file": "^0.0.x",
     "@stdlib/os-platform": "^0.0.x",
     "@stdlib/process-env": "^0.0.x",
