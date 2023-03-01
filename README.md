@@ -34,14 +34,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/os-homedir
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@deno/mod.js';
+var homedir = require( '@stdlib/os-homedir' );
 ```
 
 #### homedir()
@@ -80,7 +97,7 @@ If unable to locate a `home` directory, the function returns `null`.
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@deno/mod.js';
+var homedir = require( '@stdlib/os-homedir' );
 
 console.log( homedir() );
 ```
@@ -89,7 +106,59 @@ console.log( homedir() );
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/os-homedir-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: homedir [options]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ homedir
+e.g., /Users/<username>
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -107,8 +176,8 @@ console.log( homedir() );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/os/configdir`][@stdlib/os/configdir]</span><span class="delimiter">: </span><span class="description">return a directory for user-specific configuration files.</span>
--   <span class="package-name">[`@stdlib/os/tmpdir`][@stdlib/os/tmpdir]</span><span class="delimiter">: </span><span class="description">return the directory for storing temporary files.</span>
+-   <span class="package-name">[`@stdlib/os-configdir`][@stdlib/os/configdir]</span><span class="delimiter">: </span><span class="description">return a directory for user-specific configuration files.</span>
+-   <span class="package-name">[`@stdlib/os-tmpdir`][@stdlib/os/tmpdir]</span><span class="delimiter">: </span><span class="description">return the directory for storing temporary files.</span>
 
 </section>
 
@@ -123,7 +192,7 @@ console.log( homedir() );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -173,6 +242,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/os-homedir#cli
+[cli-url]: https://github.com/stdlib-js/os-homedir/tree/cli
+[@stdlib/os-homedir]: https://github.com/stdlib-js/os-homedir/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -187,9 +260,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/os/configdir]: https://github.com/stdlib-js/os-configdir/tree/deno
+[@stdlib/os/configdir]: https://github.com/stdlib-js/os-configdir
 
-[@stdlib/os/tmpdir]: https://github.com/stdlib-js/os-tmpdir/tree/deno
+[@stdlib/os/tmpdir]: https://github.com/stdlib-js/os-tmpdir
 
 <!-- </related-links> -->
 
