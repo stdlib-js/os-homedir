@@ -47,6 +47,7 @@ Alternatively,
 -   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
 -   If you are using Deno, visit the [`deno` branch][deno-url].
 -   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
 The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
@@ -115,10 +116,10 @@ console.log( homedir() );
 
 ## Installation
 
-To use the module as a general utility, install the module globally
+To use as a general utility, install the CLI package globally
 
 ```bash
-npm install -g @stdlib/os-homedir
+npm install -g @stdlib/os-homedir-cli
 ```
 
 </section>
@@ -175,8 +176,8 @@ e.g., /Users/<username>
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/os/configdir`][@stdlib/os/configdir]</span><span class="delimiter">: </span><span class="description">return a directory for user-specific configuration files.</span>
--   <span class="package-name">[`@stdlib/os/tmpdir`][@stdlib/os/tmpdir]</span><span class="delimiter">: </span><span class="description">return the directory for storing temporary files.</span>
+-   <span class="package-name">[`@stdlib/os-configdir`][@stdlib/os/configdir]</span><span class="delimiter">: </span><span class="description">return a directory for user-specific configuration files.</span>
+-   <span class="package-name">[`@stdlib/os-tmpdir`][@stdlib/os/tmpdir]</span><span class="delimiter">: </span><span class="description">return the directory for storing temporary files.</span>
 
 </section>
 
@@ -240,6 +241,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [stdlib]: https://github.com/stdlib-js/stdlib
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
+
+[cli-section]: https://github.com/stdlib-js/os-homedir#cli
+[cli-url]: https://github.com/stdlib-js/os-homedir/tree/cli
+[@stdlib/os-homedir]: https://github.com/stdlib-js/os-homedir/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
