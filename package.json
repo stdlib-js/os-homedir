@@ -46,7 +46,8 @@
     "@stdlib/fs-read-file": "^0.0.8",
     "@stdlib/os-platform": "^0.0.8",
     "@stdlib/process-env": "^0.0.7",
-    "@stdlib/process-getuid": "^0.0.7"
+    "@stdlib/process-getuid": "^0.0.7",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-absolute-path": "^0.0.8",
