@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@deno/mod.js';
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.1.0-deno/mod.js';
 ```
 
 #### homedir()
@@ -91,7 +91,7 @@ If unable to locate a `home` directory, the function returns `null`.
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@deno/mod.js';
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.1.0-deno/mod.js';
 
 console.log( homedir() );
 ```
