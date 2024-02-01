@@ -45,38 +45,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/os-homedir
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-homedir = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var homedir = require( 'path/to/vendor/umd/os-homedir/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.homedir;
-})();
-</script>
+var homedir = require( '@stdlib/os-homedir' );
 ```
 
 #### homedir()
@@ -114,27 +109,69 @@ If unable to locate a `home` directory, the function returns `null`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var homedir = require( '@stdlib/os-homedir' );
 
 console.log( homedir() );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/os-homedir-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: homedir [options]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ homedir
+e.g., /Users/<username>
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -226,8 +263,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/os-homedir/tree/deno
+[deno-readme]: https://github.com/stdlib-js/os-homedir/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/os-homedir/tree/umd
+[umd-readme]: https://github.com/stdlib-js/os-homedir/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/os-homedir/tree/esm
+[esm-readme]: https://github.com/stdlib-js/os-homedir/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/os-homedir/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/os-homedir/main/LICENSE
@@ -236,9 +276,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/os/configdir]: https://github.com/stdlib-js/os-configdir/tree/umd
+[@stdlib/os/configdir]: https://github.com/stdlib-js/os-configdir
 
-[@stdlib/os/tmpdir]: https://github.com/stdlib-js/os-tmpdir/tree/umd
+[@stdlib/os/tmpdir]: https://github.com/stdlib-js/os-tmpdir
 
 <!-- </related-links> -->
 
