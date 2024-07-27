@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/os-homedir",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Return the current user's home directory.",
   "license": "Apache-2.0",
   "author": {
@@ -44,16 +44,16 @@
     "@stdlib/assert-is-windows": "^0.2.1",
     "@stdlib/cli-ctor": "^0.2.1",
     "@stdlib/fs-read-file": "^0.2.1",
-    "@stdlib/os-platform": "^0.2.1",
-    "@stdlib/process-env": "^0.2.1",
-    "@stdlib/process-getuid": "^0.2.1"
+    "@stdlib/os-platform": "^0.2.2",
+    "@stdlib/process-env": "^0.2.2",
+    "@stdlib/process-getuid": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-absolute-path": "^0.2.1",
     "@stdlib/assert-is-browser": "^0.2.1",
     "@stdlib/assert-is-string": "^0.2.1",
     "@stdlib/process-exec-path": "^0.2.1",
-    "@stdlib/utils-noop": "^0.2.1",
+    "@stdlib/utils-noop": "^0.2.2",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
