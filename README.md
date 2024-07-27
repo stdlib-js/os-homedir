@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/os-homedir/tags). For example,
+
+```javascript
 import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.2.2-esm/index.mjs';
 ```
 
@@ -96,7 +101,7 @@ If unable to locate a `home` directory, the function returns `null`.
 <body>
 <script type="module">
 
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.2.2-esm/index.mjs';
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@esm/index.mjs';
 
 console.log( homedir() );
 
