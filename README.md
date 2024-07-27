@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@esm/index.mjs';
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.2.2-esm/index.mjs';
 ```
 
 #### homedir()
@@ -96,7 +96,7 @@ If unable to locate a `home` directory, the function returns `null`.
 <body>
 <script type="module">
 
-import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@esm/index.mjs';
+import homedir from 'https://cdn.jsdelivr.net/gh/stdlib-js/os-homedir@v0.2.2-esm/index.mjs';
 
 console.log( homedir() );
 
